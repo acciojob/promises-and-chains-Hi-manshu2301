@@ -7,7 +7,7 @@ document.getElementById("form").addEventListener("submit",function(e){
 		alert("Please enter valid details.");
 		return;
 	}
-	let promise = new Promise(function(resolve,reject){
+	let promise = new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			if(age>18){
 				resolve(name);
@@ -16,11 +16,11 @@ document.getElementById("form").addEventListener("submit",function(e){
 			}
 		},4000);
 	});
-	promise.then(function (username) {
-		alert(`Welcome, ${username}. You can vote`);
+	promise.then((user)=> {
+		alert(`Welcome, ${user}. You can vote`);
 		
-	}).catch(function(username){
-		alert(`Oh sorry ${username}. You aren't old enough.`)
+	}).catch((user)=>{
+		alert(`Oh sorry ${user}. You aren't old enough.`)
 	});
 });
 
