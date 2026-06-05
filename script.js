@@ -1,8 +1,8 @@
 //your JS code here. If required.
 document.getElementById("form").addEventListener("submit",function(e){
 	e.preventDefault();
-	let name = document.getElementById("name");
-	let age = document.getElementById("age");
+	let name = document.getElementById("name").value;
+	let age = document.getElementById("age").value;
 	if(name == "" || age == ""){
 		alert("Please enter valid details.");
 		return;
