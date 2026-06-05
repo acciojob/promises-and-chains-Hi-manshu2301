@@ -4,7 +4,7 @@ document.getElementById("form").addEventListener("submit",function(e){
 	let name = document.getElementById("name").value;
 	let age = Number(document.getElementById("age").value);
 	if(name == "" || age == ""){
-		alert("Please enter valid details.");
+		alert("Please enter valid details");
 		return;
 	}
 	let promise = new Promise((resolve,reject)=>{
