@@ -16,7 +16,7 @@ document.getElementById("form").addEventListener("submit",function(e){
 			}
 		},4000);
 	});
-	Promise.then(function (username) {
+	promise.then(function (username) {
 		alert(`Welcome, ${username}. You can vote`);
 		
 	}).catch(function(username){
