@@ -2,7 +2,7 @@
 document.getElementById("form").addEventListener("submit",function(e){
 	e.preventDefault();
 	let name = document.getElementById("name").value;
-	let age = document.getElementById("age").value;
+	let age = Number(document.getElementById("age").value);
 	if(name == "" || age == ""){
 		alert("Please enter valid details.");
 		return;
@@ -17,7 +17,7 @@ document.getElementById("form").addEventListener("submit",function(e){
 		},4000);
 	});
 	promise.then((user)=> {
-		alert(`Welcome, ${user}. You can vote`);
+		alert(`Welcome, ${user}. You can vote.`);
 		
 	}).catch((user)=>{
 		alert(`Oh sorry ${user}. You aren't old enough.`)
